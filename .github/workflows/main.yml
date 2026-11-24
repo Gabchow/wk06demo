@@ -1,14 +1,13 @@
-name: wk06demo
+name: Simple CI Workflow
 on:
-    push:
-      branches: main
-
+  push:
+    branches: [main]
 jobs:
   build:
-      runs-on: ubuntu-24.04
-      steps:
-          -uses: actions/checkout@v7
-          -name: List files
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v7
+      - name: List files
         run: |
           pwd
           ls -la
